@@ -1,5 +1,5 @@
 " Use Pathogen:
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 call pathogen#helptags()
 
 " ========================================================================
@@ -36,6 +36,16 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-foreplay'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
+
+" ===============
+" Go stuff
+"
+" ===============
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 " ================
 " Ruby stuff

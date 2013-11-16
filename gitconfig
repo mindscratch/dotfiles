@@ -1,6 +1,6 @@
 [user]
-	name = Ben Orenstein
-	email = ben.orenstein@gmail.com 
+	name = Craig Wickesser
+	email = codecraig@gmail.com 
 [alias]
 	co = checkout
         cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
@@ -20,6 +20,7 @@
 
 [alias]
       lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+      st = status
 [help]
 	autocorrect = 1
 [branch]
@@ -30,6 +31,6 @@
 [rerere]
 	enabled = 1
 [github]
-	user = r00k
+	user = mindscratch
 [merge]
         ff = only
