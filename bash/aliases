@@ -20,7 +20,7 @@ fi
 #alias c='cd ~/code'
 #alias d='cd ~/.dotfiles'
 #alias dbprep='rdm && rdtp'
-#alias gad='git add .'
+alias gad='git add .'
 #alias gc='git commit'
 #alias gca='git commit -a'
 #alias gcaa='git commit -a --amend -C HEAD'
