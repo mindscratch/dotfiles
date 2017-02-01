@@ -43,6 +43,19 @@ function git_branch_name {
   echo "$val"
 }
 
+# alternative to git_branch_name, think they both give same output
+function git_full_branch_name {
+  echo $(git symbolic-ref HEAD 2>/dev/null | awk -Frefs/heads/ {'print $NF'})
+}
+
+function git_unpushed {
+  brinfo=$(git branch -v | grep `git_branch_name`)
+  if [[ $brinfo =~ ("ahead "([[:digit:]]*)]) ]]
+  then
+    echo ":${BASH_REMATCH[2]}:"
+  fi
+}
+
 function git-done {
   branch=`git_branch_name`
   git checkout master && git pull --rebase 
