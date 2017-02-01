@@ -7,7 +7,7 @@ export EDITOR="vim"
 shopt -s cdspell
 
 # Set this so screen will show the currently-running program
-PROMPT_COMMAND='echo -ne "\033k\033\\"'
+#PROMPT_COMMAND='echo -ne "\033k\033\\"'
 
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
@@ -16,15 +16,15 @@ stty stop undef
 #################
 #  prompt stuff #
 #################
-YELLOW="\[\033[0;33m\]"
-export PS1="=================================================================================================================================================\n\[\033[01;32m\]\u@\h\[\033[01;34m\] \w$YELLOW \$(parse_git_branch) \$\[\033[00m\] "
+#YELLOW="\[\033[0;33m\]"
+#export PS1="=================================================================================================================================================\n\[\033[01;32m\]\u@\h\[\033[01;34m\] \w$YELLOW \$(parse_git_branch) \$\[\033[00m\] "
 
 
 #####################
 #  ssh-agent stuff  #
 #####################
 # get the ssh agent started
-SSH_ENV="$HOME/.ssh/environment"
+#SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
 	echo "Initialising new SSH agent..."
@@ -36,19 +36,19 @@ function start_agent {
 }
 
 # Source SSH settings, if applicable
-if [ -f "${SSH_ENV}" ]; then
-	. "${SSH_ENV}" > /dev/null
-	ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-	start_agent;
-	}
-else
-	start_agent;
-fi 
+#if [ -f "${SSH_ENV}" ]; then
+#	. "${SSH_ENV}" > /dev/null
+#	ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+#	start_agent;
+#	}
+#else
+#	start_agent;
+#fi 
 
 
 # BETTER PROMPT STUFF, MAYBE #
 function _git_prompt() {
-  local git_status="`git status -unormal 2>&1'"
+  local git_status="`git status -unormal 2>&1`"
   if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
     if [[ "$git_status" =~ nothing\ to\ commit ]]; then
       # no commits but stuff hasn't been pushed

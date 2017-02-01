@@ -1,31 +1,3 @@
-# Switch to a gem directory, trying to match your name the best
-function cdgem {
-  gem_dir=`gem env | grep INSTALLATION | cut -d' ' -f6`
-  cd $gem_dir/gems
-  cd `ls|grep $1|sort|tail -1`
-}
-
-function sgi {
-sudo gem install $1
-}
-
-function sagi {
-sudo apt-get -y install $1 
-}
-
-function syi {
-sudo yum -y install $1
-}
-
-function glg { 
-gem list | grep $1
-}
-
-
-function rrg { 
-bundle exec rake routes | grep $1
-}
-
 #################
 #   git stuff   #
 #################
