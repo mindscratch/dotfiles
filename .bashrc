@@ -18,7 +18,7 @@ alias ga='git diff --check && git add'
 alias gnum='git rev-list --count master..'
 
 function git_full_branch_name {
-	echo $(git symbolic-ref HEAD 2>/dev/null | awk -Frefs/heads {'print $NF'})
+	echo $(git symbolic-ref HEAD 2>/dev/null | awk -Frefs/heads/ {'print $NF'})
 }
 
 function _git_prompt() {
