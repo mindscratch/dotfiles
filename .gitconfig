@@ -1,0 +1,23 @@
+[user]
+    name = rcwicke
+[core]
+    editor = vim
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    ui = auto
+[diff]
+    renames = copy
+    mnemonicprefix = 1
+[alias]
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    st = status -u
+    br = branch
+[branch]
+    autosetuprebase = always
+[push]
+    default = tracking
+[pull]
+    rebase = true
