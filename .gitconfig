@@ -15,6 +15,7 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     st = status -u
     br = branch
+    co = checkout
 [branch]
     autosetuprebase = always
 [push]

@@ -10,7 +10,8 @@ if [ -f $HOME/git-completion.bash ]; then
 fi
 
 # User specific environment and startup programs
+GOPATH=$HOME/go
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$GOPATH/bin
 
 export PATH
