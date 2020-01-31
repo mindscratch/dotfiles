@@ -11,7 +11,8 @@ fi
 
 # User specific environment and startup programs
 GOPATH=$HOME/go
+JAVA_HOME=/usr/local/jdk-13.0.2
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin:$GOPATH/bin
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$GOPATH/bin:$JAVA_HOME/bin
 
 export PATH
