@@ -10,6 +10,8 @@ if [ -f $HOME/git-completion.bash ]; then
 fi
 
 # User specific environment and startup programs
+export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --raw-control-chars --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+
 GOPATH=$HOME/go
 JAVA_HOME=/usr/local/jdk-13.0.2
 
