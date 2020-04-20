@@ -18,3 +18,5 @@ MVN_HOME=/Users/cwickesser/dev/apache-maven-3.6.3
 PATH=$PATH:$HOME/.local/bin:$HOME/bin:$JAVA_HOME/bin:$MVN_HOME/bin
 
 export PATH
+
+source ~/.iterm2_shell_integration.bash

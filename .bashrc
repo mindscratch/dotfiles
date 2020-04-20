@@ -16,6 +16,7 @@ alias gcm='git commit -m'
 alias gp='git push origin $(git_full_branch_name)'
 alias ga='git diff --check && git add'
 alias gnum='git rev-list --count master..'
+alias ll='ls -al'
 
 function git_full_branch_name {
 	echo $(git symbolic-ref HEAD 2>/dev/null | awk -Frefs/heads/ {'print $NF'})
