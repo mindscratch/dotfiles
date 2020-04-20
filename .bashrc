@@ -66,4 +66,4 @@ function _prompt_command() {
 	PS1="`_git_prompt`${CYAN}[\u@\h ${GREEN}\w${CYAN}]\n\$${LIGHT_GRAY} "
 }
 
-PROMPT_COMMAND=_prompt_command
+# PROMPT_COMMAND=_prompt_command

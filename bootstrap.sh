@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in .bashrc .bash_profile .gitconfig git-completion.bash; do
+for file in .bashrc .bash_profile .gitconfig git-completion.zsh; do
   if [[ -f "$HOME/$file" ]]; then
     rm "$HOME/$file"
   fi
