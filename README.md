@@ -1,4 +1,7 @@
-# holman does dotfiles
+# mindscratch does dotfiles
+
+Forked from [holman dotfiles](https://github.com/holman/dotfiles/) to meet my needs.
+Read below for more details, from the original readme.
 
 Your dotfiles are how you personalize your system. These are mine.
 
