@@ -30,6 +30,11 @@
         # for more information on different options of the below setting.
         #
         # Setting to git 2.0 default to suppress warning message
-        default = simple
+	default = simple
+
 [credential]
 	helper = osxkeychain
+
+[credential "https://git-codecommit.us-east-1.amazonaws.com"]
+        helper = !aws --profile tigris-ui codecommit credential-helper $@
+        UseHttpPath = true

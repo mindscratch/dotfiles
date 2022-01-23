@@ -10,6 +10,7 @@ then
   echo "  Installing nvm for you."
 
   brew install nvm
+  mkdir $HOME/.nvm
 
 fi
 
