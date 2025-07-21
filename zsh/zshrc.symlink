@@ -53,3 +53,35 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+eval "$(rbenv init - zsh)"
+
+
+# pnpm
+export PNPM_HOME="/Users/craig/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/craig/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+source <(kubectl completion zsh)
+export KUBECONFIG="${HOME}/.kube/config:${HOME}/.kube/dd-config"
+alias k=kubectl
+
+# most projects use linux/amd64 (versus ARM or aarch64 like apple chips or raspberry pi) so default to that
+# platform
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
